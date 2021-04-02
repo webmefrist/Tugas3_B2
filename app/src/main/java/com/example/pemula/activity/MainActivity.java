@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         TextView navUsername = (TextView) headerView.findViewById(R.id.tvusername);
 
         navUsername.setText(""+usersucceslogin);
-        Toast.makeText(getApplicationContext(),"welcome"+usersucceslogin,Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"welcome "+usersucceslogin,Toast.LENGTH_SHORT).show();
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.

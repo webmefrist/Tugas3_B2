@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.pemula.R;
 
-public class DeveloperFragment extends Fragment {
+public class Developerfragment extends Fragment {
 
     private DeveloperViewModel developerViewModel;
 
@@ -22,13 +22,11 @@ public class DeveloperFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         developerViewModel =
                 new ViewModelProvider(this).get(DeveloperViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
+        View root = inflater.inflate(R.layout.fragment_developer, container, false);
+        final TextView textView = root.findViewById(R.id.text_developer);
         developerViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
+            public void onChanged(@Nullable String s) { textView.setText(s); }
         });
         return root;
     }
